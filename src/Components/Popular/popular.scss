@@ -90,12 +90,14 @@
                         display: flex;
                         align-items: flex-start;
                         padding: 0;
+                        // padding: 1rem 1.5rem;
                         justify-content: center;
                         flex-direction: column;
                         background: linear-gradient(rgba(0,0,0,0.846), rgba(0,0,0,0.759));
                         bottom: 0;
                         width: 100%;
-                        height: 100%;
+                        height: 0;
+                        // height: 100%;
                         overflow: hidden;
 
                         h3{
@@ -132,6 +134,57 @@
 
 
                         }
+                    }
+                }
+
+                .destFooter{
+                    padding: 1rem;
+
+                    .number{
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: var(--blackColor);
+                        position: relative;
+                        width: max-content;
+
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            background: var(--primaryColor);
+                            top: 45%;
+                            right: -150%;
+                            height: 5px;
+                            width: 45px;
+                            border-radius: 1rem;
+                        }
+                    }
+                    .destText{
+                        justify-content: space-between;
+
+
+                        h6{
+                            color: var(--blackColor);
+                            font-size: 15px;
+                        }
+
+                        .flex{
+                            font-size: 16px;
+                            font-weight: 600;
+                            align-items: flex-start;
+                            transform: translateY(5px);
+
+                        }
+                    }
+                }
+
+                &:hover{
+                    .overlayInfo{
+                        overflow: visible;
+                        padding: 1rem 1.5rem;
+                        height: 100%;
+
+
+
                     }
                 }
 

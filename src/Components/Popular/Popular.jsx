@@ -5,8 +5,58 @@ import {BsArrowLeftShort, BsDot} from 'react-icons/bs';
 import {BsArrowRightShort} from 'react-icons/bs';
 
 
-import img from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
+import img1 from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
+import img2 from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
+import img3 from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
+import img4 from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
+import img5 from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
 
+
+const Data = [
+  {
+    id:1,
+    imgSrc:img1,
+    destTitle:'Machu Picchu',
+    location:'Peru',
+    grade: 'CULTURAL RELAX',
+  },
+
+  {
+    id:2,
+    imgSrc:img2,
+    destTitle:'Machu Picchu',
+    location:'Peru',
+    grade: 'CULTURAL RELAX',
+  },
+
+  {
+    id:3,
+    imgSrc:img3,
+    destTitle:'Machu Picchu',
+    location:'Peru',
+    grade: 'CULTURAL RELAX',
+  },
+
+  {
+    id:4,
+    imgSrc:img4,
+    destTitle:'Machu Picchu',
+    location:'Peru',
+    grade: 'CULTURAL RELAX',
+  },
+
+  {
+    id:5,
+    imgSrc:img5,
+    destTitle:'Machu Picchu',
+    location:'Peru',
+    grade: 'CULTURAL RELAX',
+  },
+
+
+
+
+]
 
 const Popular = ()=> {
   return (
@@ -35,7 +85,12 @@ const Popular = ()=> {
         </div>
 
         <div className='mainContent grid'>
-          <div className="singleDistination">
+          
+
+          {
+            Data.map(()=>{
+              return(
+                <div className="singleDistination">
             <div className="destImage">
               <img src={img} alt='Imagetitle'/>
 
@@ -69,6 +124,10 @@ const Popular = ()=> {
               </div>
             </div>
           </div>
+
+              )
+            })
+          }
         </div>
       </div>
     </section>

@@ -82,7 +82,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.846), rgba(0, 0, 0, 0.759));
   bottom: 0;
   width: 100%;
-  height: 100%;
+  height: 0;
   overflow: hidden;
 }
 .popular .secContainer .mainContent .singleDistination .destImage .overlayInfo h3 {
@@ -110,4 +110,43 @@
   background: var(--blackColor);
   border: 1px solid var(--primaryColor);
   color: var(--primaryColor);
+}
+.popular .secContainer .mainContent .singleDistination .destFooter {
+  padding: 1rem;
+}
+.popular .secContainer .mainContent .singleDistination .destFooter .number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blackColor);
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+.popular .secContainer .mainContent .singleDistination .destFooter .number::after {
+  content: "";
+  position: absolute;
+  background: var(--primaryColor);
+  top: 45%;
+  right: -150%;
+  height: 5px;
+  width: 45px;
+  border-radius: 1rem;
+}
+.popular .secContainer .mainContent .singleDistination .destFooter .destText {
+  justify-content: space-between;
+}
+.popular .secContainer .mainContent .singleDistination .destFooter .destText h6 {
+  color: var(--blackColor);
+  font-size: 15px;
+}
+.popular .secContainer .mainContent .singleDistination .destFooter .destText .flex {
+  font-size: 16px;
+  font-weight: 600;
+  align-items: flex-start;
+  transform: translateY(5px);
+}
+.popular .secContainer .mainContent .singleDistination:hover .overlayInfo {
+  overflow: visible;
+  padding: 1rem 1.5rem;
+  height: 100%;
 }/*# sourceMappingURL=popular.css.map */
