@@ -6,51 +6,51 @@ import {BsArrowRightShort} from 'react-icons/bs';
 
 
 import img1 from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
-import img2 from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
-import img3 from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
-import img4 from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
-import img5 from '../../Assets/pexels-alfonso-escalante-2533090.jpg';
+import img2 from '../../Assets/pexels-cátia-matos-984864.jpg';
+import img3 from '../../Assets/pexels-oleksandr-p-1008155.jpg';
+import img4 from '../../Assets/pexels-te-lensfix-1371360.jpg';
+import img5 from '../../Assets/pexels-chanaka-madushan-sugathadasa-999068.jpg';
 
 
 const Data = [
   {
     id:1,
     imgSrc:img1,
-    destTitle:'Machu Picchu',
-    location:'Peru',
-    grade: 'CULTURAL RELAX',
+    destTitle:'Rough Tour',
+    location:'Samanala Wewa',
+    grade: 'HARD RELAX',
   },
 
   {
     id:2,
     imgSrc:img2,
-    destTitle:'Machu Picchu',
-    location:'Peru',
-    grade: 'CULTURAL RELAX',
+    destTitle:'City Visiting',
+    location:'Galle',
+    grade: 'SHOPPING RELAX',
   },
 
   {
     id:3,
     imgSrc:img3,
-    destTitle:'Machu Picchu',
-    location:'Peru',
-    grade: 'CULTURAL RELAX',
+    destTitle:'Travel Today',
+    location:'Kandy',
+    grade: 'HOLIDAY RELAX',
   },
 
   {
     id:4,
     imgSrc:img4,
-    destTitle:'Machu Picchu',
-    location:'Peru',
-    grade: 'CULTURAL RELAX',
+    destTitle:'Boat Safari',
+    location:'Maadu River',
+    grade: 'REAL RELAX',
   },
 
   {
     id:5,
     imgSrc:img5,
-    destTitle:'Machu Picchu',
-    location:'Peru',
-    grade: 'CULTURAL RELAX',
+    destTitle:'Along Holiday',
+    location:'Sigiriya',
+    grade: 'Exited RELAX',
   },
 
 
@@ -88,41 +88,42 @@ const Popular = ()=> {
           
 
           {
-            Data.map(()=>{
+            Data.map(({id,imgSrc,destTitle,location,grade})=>{
               return(
                 <div className="singleDistination">
-            <div className="destImage">
-              <img src={img} alt='Imagetitle'/>
+                      <div className="destImage">
 
-              <div className="overlayInfo">
-                <h3>some text</h3>
-                <p>
-                  Lorem ipsum dolor sit amet.
-                </p>
+                        <img src={imgSrc} alt='Imagetitle'/>
 
-                <BsArrowRightShort className='icon'/>
-              </div>
+                        <div className="overlayInfo">
+                          <h3>{destTitle}</h3>
+                          <p>
+                            {location}
+                          </p>
 
-            </div>
+                          <BsArrowRightShort className='icon'/>
+                        </div>
 
-            <div className='destFooter'>
-              <div className="number">
-                01
-              </div>
+                      </div>
 
-
-              <div className='destText flex'>
-                <h6>London</h6>
-                <span className='flex'>
-                  <span className='dot'>
-                    <BsDot className='icon'/>
+                <div className='destFooter'>
+                  <div className="number">
+                    0{id}
+                  </div>
 
 
-                  </span>
-                </span>
+                  <div className='destText flex'>
+                    <h6>{location}</h6>
+                    <span className='flex'>
+                      <span className='dot'>
+                        <BsDot className='icon'/>
 
-              </div>
-            </div>
+
+                      </span>
+                    </span>
+
+                  </div>
+                </div>
           </div>
 
               )
