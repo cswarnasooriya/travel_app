@@ -44,7 +44,7 @@ const Navbar = ()=> {
         <div className="logoDiv">
           <a href="#" className="logo">
             <h1 className='flex'><SiYourtraveldottv className="icon"/>
-            Dot
+            wa R na
             </h1>
 
           </a>

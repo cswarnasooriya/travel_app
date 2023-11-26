@@ -16,6 +16,9 @@ function App() {
     <Home/>
     <Popular/>
     <Offers/>
+    <About/>
+    <Blog/>
+    <Footer/>
 
 
 

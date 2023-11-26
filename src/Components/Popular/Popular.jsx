@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './popular.css';
 
 import {BsArrowLeftShort, BsDot} from 'react-icons/bs';
@@ -11,6 +11,8 @@ import img3 from '../../Assets/pexels-oleksandr-p-1008155.jpg';
 import img4 from '../../Assets/pexels-te-lensfix-1371360.jpg';
 import img5 from '../../Assets/pexels-chanaka-madushan-sugathadasa-999068.jpg';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Data = [
   {
@@ -45,13 +47,7 @@ const Data = [
     grade: 'REAL RELAX',
   },
 
-  {
-    id:5,
-    imgSrc:img5,
-    destTitle:'Along Holiday',
-    location:'Sigiriya',
-    grade: 'Exited RELAX',
-  },
+
 
 
 
@@ -59,11 +55,19 @@ const Data = [
 ]
 
 const Popular = ()=> {
+
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+  }, [])
+
+
+
+
   return (
     <section className='popular section container'>
       <div className="secContainer">
         <div className="secHeader flex">
-          <div className='textDiv'>
+          <div data-aos="fade-right" data-aos-duration="2500" className='textDiv'>
             <h2 className='seccTitle'>
               Popular Destination
             </h2>
@@ -73,7 +77,7 @@ const Popular = ()=> {
             </p>
           </div>
 
-          <div className='iconsDiv flex'>
+          <div data-aos="fade-left" data-aos-duration="2500" className='iconsDiv flex'>
             <BsArrowLeftShort className='icon leftIcon'/>
             <BsArrowRightShort className='icon'/>
           </div>
@@ -90,7 +94,7 @@ const Popular = ()=> {
           {
             Data.map(({id,imgSrc,destTitle,location,grade})=>{
               return(
-                <div className="singleDistination">
+                <div data-aos="fade-up" className="singleDistination">
                       <div className="destImage">
 
                         <img src={imgSrc} alt='Imagetitle'/>

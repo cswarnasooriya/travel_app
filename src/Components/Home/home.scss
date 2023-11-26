@@ -77,7 +77,7 @@
 
                 label{
                     display: block;
-                    color: var(--inputColor);
+                    color: var(--textColor);
                     font-weight: 500;
                     font-size: 13px;
                     padding-bottom: .4rem;
@@ -120,3 +120,91 @@
 }
 
 
+//media quiries
+@media screen and (min-width: 480px) {
+    
+    .home{
+        .secContainer{
+            .homeCard{
+                bottom: -100px;
+                width: 90%;
+                grid-template-columns: repeat(2, 1fr);
+                .btn{
+                    transform: translate(15px);
+                }
+            }
+        }
+    }
+}
+//media quiries
+@media screen and (min-width: 556px) {
+    
+    .home{
+        .secContainer{
+            .homeText{
+                .title{
+                    font-size: 2.5rem;
+                }
+                .subTitle{
+                    font-size:18px;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    
+    .home{
+        .secContainer{
+            .homeCard{
+                bottom: -20%;
+                grid-template-columns: repeat(4,1fr);
+
+            
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    
+    .home{
+        .secContainer{
+            .homeText{
+              padding: 1rem 10rem;
+
+            .title{
+                font-size: 3.5rem;
+                margin: auto;
+                line-height: 4rem;
+            }
+            
+            .subTitle{
+                width: 70%;
+            }
+
+            
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .home{
+        .secContainer{
+            .homeText{
+                .subTitle{
+                    font-size: 20px;
+                }
+            }
+
+            .homeCard{
+                width: 70%;
+            }
+        }
+    }
+}

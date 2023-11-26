@@ -63,7 +63,7 @@
 }
 .home .secContainer .homeCard .locationDiv label, .home .secContainer .homeCard .distDiv label, .home .secContainer .homeCard .priceDiv label {
   display: block;
-  color: var(--inputColor);
+  color: var(--textColor);
   font-weight: 500;
   font-size: 13px;
   padding-bottom: 0.4rem;
@@ -95,4 +95,50 @@
   padding: 0.6rem 1.5rem;
   color: var(--whitecolor);
   font-weight: 600;
+}
+
+@media screen and (min-width: 480px) {
+  .home .secContainer .homeCard {
+    bottom: -100px;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home .secContainer .homeCard .btn {
+    transform: translate(15px);
+  }
+}
+@media screen and (min-width: 556px) {
+  .home .secContainer .homeText .title {
+    font-size: 2.5rem;
+  }
+  .home .secContainer .homeText .subTitle {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .home .secContainer .homeCard {
+    bottom: -20%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 720px) {
+  .home .secContainer .homeText {
+    padding: 1rem 10rem;
+  }
+  .home .secContainer .homeText .title {
+    font-size: 3.5rem;
+    margin: auto;
+    line-height: 4rem;
+  }
+  .home .secContainer .homeText .subTitle {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home .secContainer .homeText .subTitle {
+    font-size: 20px;
+  }
+  .home .secContainer .homeCard {
+    width: 70%;
+  }
 }/*# sourceMappingURL=home.css.map */
